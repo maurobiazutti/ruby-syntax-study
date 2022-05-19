@@ -1,0 +1,13 @@
+{
+    "ruby.rubocop.useBundler": true,
+    "ruby.rubocop.suppressRubocopWarnings": false,
+    "ruby.rubocop.configFilePath": "",
+    "ruby.rubocop.executePath": "",
+    "code-runner.languageIdToFileExtensionMap": {
+
+        "bat": ".bat",
+        "powershell": ".ps1",
+        "typescript": ".ts"
+    },
+    "ruby.rubocop.onSave": true
+}
