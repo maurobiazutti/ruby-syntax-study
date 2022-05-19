@@ -8,7 +8,7 @@ linguagem ||= 'javascript'
 puts linguagem # Ruby
 
 # Range
-#range = 0..5
+# range = 0..5
 
 # next sobe um nivel a ultima string ou inteiro a direita
 palavra = 'ruby'
@@ -24,4 +24,6 @@ until indice.zero?
   next if indice == 1
 
   print palavra[indice]
-end # ybr
+end
+
+# ybr
