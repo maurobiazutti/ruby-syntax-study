@@ -1,5 +1,4 @@
 # Map
-
 list_nomes = %w[Mauro Marcos Geraldo iris]
 
 nomes_cargo = list_nomes.map do |cargo|

@@ -1,5 +1,4 @@
 # Declaração de Variavel Strings
-
 nome = 'Mauro'
 nome = 'Iris'
 nome = 'Geraldo' # não faz interpolação

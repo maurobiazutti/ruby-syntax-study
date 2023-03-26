@@ -1,5 +1,4 @@
 # Hashes estrutura de Chave/Valor
-
 dados = { nome: 'Mauro', idade: 34, peso: 90 }
 
 # Adicionar elementos no hash

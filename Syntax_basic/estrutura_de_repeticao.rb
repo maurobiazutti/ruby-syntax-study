@@ -1,4 +1,4 @@
-##### LAÇO
+##### LAÇOS
 # Comando usados nos Laços
 # break -> sair do laço
 # return -> sair do laço e do método onde o laço está contido
@@ -6,7 +6,6 @@
 # redo -> repete o laço do início a condição não sera reavaliada
 
 ##### While -> Repetir enquanto for True
-
 valor8 = 5
 while valor8 >= 0
   puts valor8
@@ -22,7 +21,6 @@ while valor9 <= 10
 end
 
 ##### While para percorrer em listas
-
 list_nomes = %w[Mauro Marcos Geraldo iris]
 p list_nomes.sort
 contador = 0
@@ -35,7 +33,6 @@ end
 
 ##### UNTIL
 # Until vai executar enquanto for False ou ate atingir a condição
-
 valor10 = 0
 until valor10 == 10
   puts valor10
@@ -43,14 +40,12 @@ until valor10 == 10
 end
 
 ##### FOR
-
 lista1 = [0, 1, 2, 3, 4, 5]
 for meu_valor in lista1
   puts "meu valor é #{meu_valor}"
 end
 
 ### For para percorrer dados do Hash
-
 dados = { nome: 'Mauro', idade: 34, peso: 90 }
 
 for k, v in dados do
@@ -59,7 +54,6 @@ end
 
 ##### EACH (para cada)
 # each com Array
-
 lista2 = ['A', 'B', 'C', 3, 4, 5]
 
 lista2.each do |meu_valor1|
@@ -67,7 +61,6 @@ lista2.each do |meu_valor1|
 end
 
 # each com hash
-
 dados_m = { nome: 'Mauro', idade: 34 }
 dados_m.each do |chave, valor|
   puts "Minha chave é #{chave} com valor #{valor}"
