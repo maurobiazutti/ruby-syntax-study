@@ -7,9 +7,9 @@ dados[:altura] = 1.78
 dados[74] = 'Numero da casa'
 
 # Para imprir
-p dados[:nome] # "Mauro"
-p dados[:altura] # 1.78
-p dados
+putus dados[:nome] # "Mauro"
+putus dados[:altura] # 1.78
+putus dados
 
 # deletar item do hash
 dados.delete(:altura)
