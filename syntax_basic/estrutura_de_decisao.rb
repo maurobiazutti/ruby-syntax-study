@@ -1,7 +1,6 @@
 ## Condicionais
 
 # #IF
-
 valor = 20
 if valor > 50
   puts 'Valor maior que 50'
@@ -39,7 +38,6 @@ else
 end
 
 # #CASE
-
 mes = 'dezembro'
 case mes
 when 'janeiro'
@@ -54,13 +52,11 @@ end
 
 ## UNLESS
 # Testa se é verdadeiro se for true não executa nada se for false ai executa o bloco / EXECUTA O FALSE
-
 puts 'Digite o valor'
 valor6 = gets.chomp.to_i
 puts 'O valor não é 100' unless valor6 == 100
 
 # Condicional com Ternario condicional ? true : false
-
 valor7 = gets.chomp.to_i
 #  TESTE  #           # TRUE #                 #  FALSE  #
 puts valor7 > 5 ? 'Eu sou maior que 5' : 'Eu sou menor que 5'
