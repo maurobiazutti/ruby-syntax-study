@@ -1,5 +1,4 @@
 # MÉTODO
-
 def soma1(a, b)
   a + b
 end
