@@ -25,5 +25,4 @@ until indice.zero?
 
   print palavra[indice]
 end
-
 # ybr
