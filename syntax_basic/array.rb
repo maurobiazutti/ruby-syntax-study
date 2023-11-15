@@ -2,7 +2,7 @@
 lista = ['Strings', 'Inteiros', 'Floats', 347, 7.4, 'Mouser', 'teclado', true]
 
 # Tamanho do array
-p lista.length
+pust lista.length
 
 # Verificar se o array está vazio
 p lista.empty?
