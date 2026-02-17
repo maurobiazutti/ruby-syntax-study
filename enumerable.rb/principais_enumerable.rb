@@ -39,3 +39,19 @@ end
 #  encontrarem que atenda a condição. Se não encontrar devolve nil
 livro = produtos.find {|p| p[:categoria] == "Eletrônicos"}
 # p livro
+
+
+# reduce ou inject => Reduz ou acumula a lista a um unico valor.Devine um valor inicial e pode ir 
+# somando, mutiplicando ou agrupando
+# O 0 inicial vira o 'acumulador'. O 'p' é cada produto.
+total = produtos.reduce(0) { |acumulador, p| acumulador + p[:preco] }
+p total # Resultado: 6090
+
+frutas = ["maçã", "banana", "maçã", "laranja", "banana", "maçã"]
+
+# Conta a frequência de cada item
+contagem = frutas.reduce(Hash.new(0)) do |hash, fruta|
+  hash[fruta] += 1
+  hash # IMPORTANTE: sempre retorne o acumulador no final do bloco
+end
+# => {"maçã"=>3, "banana"=>2, "laranja"=>1}
