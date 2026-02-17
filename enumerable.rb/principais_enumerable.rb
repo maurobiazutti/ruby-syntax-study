@@ -67,3 +67,14 @@ tem_barato = produtos.any? { |p| p[:preco] < 100 }
 #  Só devolve true se absolutamente todos passarem no teste.
 todos_com_nome = produtos.all? { |p| p[:nome].present? }
 # Resultado: true
+
+
+#  group_by => Agrupa a sua lista em um formato de Hash (chave-valor), 
+#  organizando os dados pelo critério que você escolher.
+por_categoria = produtos.group_by { |p| p[:categoria] }
+# Resultado:
+# {
+#   "Eletrônicos" => [{nome: "Notebook"...}, {nome: "Teclado"...}],
+#   "Livros" => [{nome: "Livro de Ruby"...}],
+#   "Móveis" => [{nome: "Cadeira Ergonômica"...}]
+# }
