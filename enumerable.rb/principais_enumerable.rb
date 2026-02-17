@@ -55,3 +55,15 @@ contagem = frutas.reduce(Hash.new(0)) do |hash, fruta|
   hash # IMPORTANTE: sempre retorne o acumulador no final do bloco
 end
 # => {"maçã"=>3, "banana"=>2, "laranja"=>1}
+
+
+#   any? => Faz uma pergunta para a coleção: "Existe algum item que cumpre essa condição?". 
+#   Devolve "true" se pelo menos um item cumprir, e "false" se nenhum cumprir.
+tem_barato = produtos.any? { |p| p[:preco] < 100 }
+# Resultado: true (por causa do Livro de Ruby que custa 90)
+
+
+#  all? => Faz uma pergunta mais rigorosa: "Todos os itens cumprem essa condição?". 
+#  Só devolve true se absolutamente todos passarem no teste.
+todos_com_nome = produtos.all? { |p| p[:nome].present? }
+# Resultado: true
