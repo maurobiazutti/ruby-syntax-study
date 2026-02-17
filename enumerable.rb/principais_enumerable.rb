@@ -78,3 +78,54 @@ por_categoria = produtos.group_by { |p| p[:categoria] }
 #   "Livros" => [{nome: "Livro de Ruby"...}],
 #   "Móveis" => [{nome: "Cadeira Ergonômica"...}]
 # }
+
+
+# each_with_object => Ele serve para quando você quer percorrer uma lista e construir 
+# um novo objeto (como um Hash, um Array ou uma String) a partir dela.
+
+# Exemplo 1: Transformar um Array em um Hash (Frequência de palavras)
+votos = ["Ruby", "Python", "Ruby", "JavaScript", "Ruby", "Python"]
+
+contagem = votos.each_with_object(Hash.new(0)) do |voto, hash|
+  hash[voto] += 1
+end
+
+puts contagem
+# Resultado: {"Ruby"=>3, "Python"=>2, "JavaScript"=>1}
+
+
+
+# Exemplo 2: Filtrar e transformar ao mesmo tempo (Criando um novo Array)
+numeros = [1, 2, 3, 4, 5, 6]
+
+resultado = numeros.each_with_object([]) do |numero, array_novo|
+  if numero.even?
+    array_novo << (numero ** 2)
+  end
+end
+
+print resultado
+# Resultado: [4, 16, 36]
+
+
+# Exemplo 3: Agrupar dados de forma personalizada
+pessoas = [
+  { nome: "Lucas", idade: 25 },
+  { nome: "Ana", idade: 16 },
+  { nome: "Mariana", idade: 18 },
+  { nome: "Pedro", idade: 12 }
+]
+
+# Iniciamos o objeto com um Hash que já tem as duas categorias estruturadas como arrays vazios
+grupos_iniciais = { maiores: [], menores: [] }
+
+divisao = pessoas.each_with_object(grupos_iniciais) do |pessoa, hash|
+  if pessoa[:idade] >= 18
+    hash[:maiores] << pessoa[:nome]
+  else
+    hash[:menores] << pessoa[:nome]
+  end
+end
+
+puts divisao
+# Resultado: {:maiores=>["Lucas", "Mariana"], :menores=>["Ana", "Pedro"]}
