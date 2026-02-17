@@ -129,3 +129,41 @@ end
 
 puts divisao
 # Resultado: {:maiores=>["Lucas", "Mariana"], :menores=>["Ana", "Pedro"]}
+
+
+# tally =>  serve para contar a frequência de elementos em uma coleção. 
+# Ele agrupa itens iguais e retorna um Hash onde a chave é o elemento e 
+# o valor é a quantidade de vezes que ele aparece
+
+# 1. Contar votos ou escolhas
+votos = ["Ruby", "Python", "Ruby", "JavaScript", "Python", "Ruby"]
+
+resultado = votos.tally
+# Retorna: {"Ruby"=>3, "Python"=>2, "JavaScript"=>1}
+
+
+# 2. Contar palavras em um texto
+frase = "ruby é legal e python também é legal"
+palavras = frase.split(" ")
+
+contagem = palavras.tally
+# Retorna: {"ruby"=>1, "é"=>2, "legal"=>2, "e"=>1, "python"=>1, "também"=>1}
+
+# 3. Extrair dados específicos de objetos (Com map)
+pedidos = [
+  { id: 1, status: "pago" },
+  { id: 2, status: "pendente" },
+  { id: 3, status: "pago" }
+]
+
+# Primeiro extrai os status, depois conta
+status_contagem = pedidos.map { |p| p[:status] }.tally
+# Retorna: {"pago"=>2, "pendente"=>1}
+
+
+# 4. Usar com blocos (Disponível a partir do Ruby 3.1)
+numeros = [1, 2, 3, 4, 5, 6]
+
+# Conta quantos números são pares e quantos são ímpares
+resultado = numeros.tally { |n| n.even? ? "par" : "ímpar" }
+# Retorna: {"ímpar"=>3, "par"=>3}
